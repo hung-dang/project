@@ -1,0 +1,100 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.header-right {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header .header-right .header-right-chlid {
+    padding: 15px;
+}
+
+.header .header-right h4 {
+    text-align: center;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+}
+
+.header .header-right h4:hover {
+    color: rgb(134, 130, 130);
+}
+
+.header .header-right a {
+    text-decoration: none;
+}
+
+.header-left .header-left-child {
+    padding: 15px;
+}
+
+.header-left .header-left-child h1 {
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.header-left .header-left-child a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.header .header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 140px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.header .header-center h1 {
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 45pt;
+    text-transform: uppercase;
+}
+
+.header .header-center span {
+    border: 6px solid rgb(230, 54, 83);
+    width: 55%;
+}
+
+
+/* lich hoc */
+
+.middle {
+    padding: 50px;
+}
+
+.middle .model {
+    margin: 10px;
+    border: 1px solid rgb(230, 54, 83);
+    background-color: rgb(230, 54, 83);
+}
+
+.middle .model h3 {
+    padding: 15px;
+    text-align: center;
+}
+
+.middle .model a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.active,
+.btn:hover {
+    background-color: #666;
+    color: white;
+}

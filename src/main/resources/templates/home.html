@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link th:href="@{/style.css}" rel="stylesheet"/>
+
+    <title>Home</title>
+</head>
+
+<body>
+<div class="container-fluid" style="background-color: rgb(59, 57, 57);height: 350px ; width: 100%;">
+    <div class="header">
+        <div class="row fixed-top" style="background-color: rgb(59, 57, 57);">
+            <!-- do something -->
+            <div class="col-2">
+                <div class="header-left">
+                    <div class="col-12 header-left-child">
+                        <a href="home">
+                            <h1>FHU_PCL</h1>
+                        </a>
+                    </div>
+                    <!-- do something -->
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="header-right d-flex">
+                    <div class="header-right-chlid btn active">
+                        <a href="home">
+                            <h4>Trang Chủ</h4>
+                        </a>
+                    </div>
+                    <div class="header-right-chlid">
+                        <a href="/lichhoc">
+                            <h4>Lịch Học </h4>
+                        </a>
+                    </div>
+                    <div class="header-right-chlid">
+                        <a href="mohinh.html">
+                            <h4>Tổng quan mô hình</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid">
+                        <a href="kienthuc.html">
+                            <h4>Kiến thức cơ bản</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid">
+                        <a href="phanmem.html">
+                            <h4>Phần mềm hỗ trợ</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid">
+                        <a href="/feedback">
+                            <h4>Phản hồi</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid">
+                        <a href="/contract">
+                            <h4>Liên hệ</h4>
+                        </a>
+                    </div>
+
+                    <div class=" header-right-chlid">
+                        <span
+                                sec:authentication="principal.fullName" style="color:white;"></span>
+                        <a href="/logout">
+                            <h4> Logout</h4>
+                        </a>
+                    </div>
+                    <!-- do something -->
+                </div>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <h1>OVER VIEW</h1>
+            <span></span>
+        </div>
+    </div>
+    <div class="container">
+        <form action="/send" method="get">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+        integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" th:src="@{/script.js}"></script>
+</body>
+
+</html>

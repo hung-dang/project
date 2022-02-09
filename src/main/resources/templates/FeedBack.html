@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+            crossorigin="anonymous">
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link th:href="@{/style.css}" rel="stylesheet"/>
+    <title>Feedback</title>
+</head>
+<body>
+<div class="container-fluid" style="background-color: rgb(59, 57, 57);height: 350px ; width: 100%;">
+    <div class="header">
+        <div class="row fixed-top" style="background-color: rgb(59, 57, 57);">
+            <!-- do something -->
+            <div class="col-2">
+                <div class="header-left">
+                    <div class="col-12 header-left-child">
+                        <a href="home">
+                            <h1>FHU_PCL</h1>
+                        </a>
+                    </div>
+                    <!-- do something -->
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="header-right d-flex">
+                    <div class="header-right-chlid">
+                        <a href="home">
+                            <h4>Trang Chủ</h4>
+                        </a>
+                    </div>
+                    <div class="header-right-chlid">
+                        <a href="/lichhoc">
+                            <h4>Lịch Học </h4>
+                        </a>
+                    </div>
+                    <div class="header-right-chlid">
+                        <a href="mohinh.html">
+                            <h4>Tổng quan mô hình</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid">
+                        <a href="kienthuc.html">
+                            <h4>Kiến thức cơ bản</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid">
+                        <a href="phanmem.html">
+                            <h4>Phần mềm hỗ trợ</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid btn active">
+                        <a href="/feedback">
+                            <h4>Phản hồi</h4>
+                        </a>
+                    </div>
+                    <div class=" header-right-chlid">
+                        <a href="/contract">
+                            <h4>Liên hệ</h4>
+                        </a>
+                    </div>
+
+                    <div class=" header-right-chlid">
+                        <span
+                                sec:authentication="principal.fullName" style="color:white;"></span>
+                        <a href="/logout">
+                            <h4> Logout</h4>
+                        </a>
+                    </div>
+                    <!-- do something -->
+                </div>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <h1>FEED BACK</h1>
+            <span></span>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style=" width: 100%;">
+    <form th:action="@{/feedback}" th:object="${feedback}" method="post" style="text-align:center;margin-top:30px">
+        <label style=" text-transform: uppercase;font-size:20px;font-weight:bold;">Full Name</label>
+        <div>
+            <input type="text" placeholder="Full Name" th:field="*{fullName}"
+                   style="width:50%;height:40px;text-align:center;margin:20px;border-radius:5px;border:2px solid black"/>
+        </div>
+        <label style=" text-transform: uppercase;font-size:20px;font-weight:bold;">Student Code</label>
+        <div>
+            <input type="text" placeholder="Student Code" th:field="*{studentId}"
+                   style="width:50%;height:40px;text-align:center;margin:20px;border-radius:5px;border:2px solid black"/>
+        </div>
+        <label style=" text-transform: uppercase;font-size:20px;font-weight:bold;">Class Name</label>
+        <div>
+            <input type="text" placeholder="Class Name" th:field="*{nameClass}"
+                   style="width:50%;height:40px;text-align:center;margin:20px;border-radius:5px;border:2px solid black"/>
+        </div>
+        <label style=" text-transform: uppercase;font-size:20px;font-weight:bold;">Email</label>
+        <div>
+            <input type="email" placeholder="Email" th:field="*{email}"
+                   style="width:50%;height:40px;text-align:center;margin:20px;border-radius:5px;border:2px solid black"/>
+        </div>
+        <label style=" text-transform: uppercase;font-size:20px;font-weight:bold;">Message</label>
+        <div>
+            <textarea name="mes" id="mes" cols="87" rows="10" placeholder="Message" th:field="*{message}"
+                      style="text-align:center;margin:20px;border-radius:5px;border:2px solid black"></textarea>
+        </div>
+        <div class="text-primary font-weight-bold mb-3">
+            <span th:if="${mess}"> [[${mess}]] </span>
+        </div>
+        <div>
+            <button type="submit" class="btn bg-primary" style="color:white;margin:20px;width:50%">Send</button>
+        </div>
+    </form>
+</div>
+</body>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+        integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+        crossorigin="anonymous"></script>
+
+</html>

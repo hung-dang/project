@@ -1,0 +1,58 @@
+body {
+	font-family: Arial, Sans-serif;
+	background-color: #f0f4f4;
+}
+
+.content-parent {
+	background-color: #f0f4f4;
+}
+
+.content-default {
+	height: 80vh;
+}
+
+.bg-blue {
+	background-color: #285484;
+}
+
+.btn-blue, .my-bg-blue {
+	background-color: #387cb4;
+}
+
+.text-blue {
+	color: #387cb4;
+}
+
+.fa-star {
+	color: #e8e424;
+}
+
+.error {
+	color: red;
+}
+
+#success-alert {
+	display: none;
+}
+
+.pagination a:hover {
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+	.text-hide-on-phone {
+		display: none;
+	}
+	#prev, #next, .prev, .next {
+		display: none;
+	}
+	.d-flex.flex-row-reverse {
+		font-size: 10px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.d-flex.flex-row-reverse {
+		font-size: 7px;
+	}
+}
