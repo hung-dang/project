@@ -12,6 +12,7 @@ public class ContractController {
     public String contract(Model model){
         Creator creator
                 =new Creator();
+        //
         model.addAttribute("creator",creator);
         return "Creator.html";
     }
