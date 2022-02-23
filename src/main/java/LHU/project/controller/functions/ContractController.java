@@ -1,6 +1,5 @@
 package LHU.project.controller.functions;
 
-import LHU.project.entities.Creator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

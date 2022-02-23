@@ -1,6 +1,5 @@
 package LHU.project.service.impl;
 
-import LHU.project.entities.Creator;
 import LHU.project.repository.CreatorRepository;
 import LHU.project.service.CreatorService;
 import org.springframework.beans.factory.annotation.Autowired;

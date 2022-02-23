@@ -1,6 +1,5 @@
 package LHU.project.service.impl;
 
-import LHU.project.entities.FeedBack;
 import LHU.project.repository.FeedBackRepository;
 import LHU.project.service.FeedBackService;
 import org.springframework.beans.factory.annotation.Autowired;
