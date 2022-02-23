@@ -29,7 +29,7 @@ public class HomeController {
         Account account=accountService.findByUserName(userName);
         SimpleMailMessage simpleMailMessage =new SimpleMailMessage();
         simpleMailMessage.setTo(account.getEmail());
-        simpleMailMessage.setSubject("THÔNG BÁO ");
+        simpleMailMessage.setSubject(" THÔNG BÁO ");
         simpleMailMessage.setText("CLass: "+account.getClassName()+"\nRoom: "+"AA"+"\nWeekDay: "+"1231232"+"\nHour: "+"12");
         // Send Message!
         javaMailSender.send(simpleMailMessage);
